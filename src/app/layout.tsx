@@ -15,6 +15,19 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "yufox portfolio",
   description: "student engineer",
+  openGraph: {
+    title: 'yufox portfolio', // OGPで表示されるタイトル
+    description: 'student engineer', // OGPで表示される説明文
+    url: 'https://yufox.page', // あなたのサイトのURL
+    siteName: 'yufox portfolio', // サイト名
+    locale: 'ja_JP',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'yufox portfolio',
+    description: 'student engineer',
+  },
 };
 
 export default function RootLayout({
