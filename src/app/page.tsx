@@ -15,10 +15,26 @@ export default function Home() {
           <p className="text-lg text-center sm:text-left">
             Japanese university student engineer
           </p>
+          <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce flex flex-col items-center gap-2 text-gray-500">
+            <span className="text-xs uppercase tracking-widest">Scroll</span>
+            <svg 
+              className="w-5 h-5" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M19 14l-7 7m0 0l-7-7m7 7V3" 
+              />
+            </svg>
+          </div>
         </div>
 
         <p>
-          幼い頃からの「ものづくり」への興味を原点に、大学で情報工学を学んでいます多くの人に。
+          幼い頃からの「ものづくり」への興味を原点に、大学で情報工学を学んでいます。多くの人に
         </p>
         <br />
         <p className="font-bold text-4xl text-center">「これがあって良かった」</p>
