@@ -3,6 +3,7 @@ interface WorkItem {
   id: string;
   title: string;
   subtitle: string;
+  url?: string;
   concept: string;
   description: string;
   features: string[];
@@ -20,21 +21,23 @@ export const WorksData: WorkItem[] = [
   {
     id: "scores",
     title: "楽譜館",
-    subtitle: " https://scores.ompoo.org/　エレクトーンサークルの「楽譜を探す・買う」手間を解消する管理アプリ",
+    subtitle: " エレクトーンサークルの「楽譜を探す・買う」手間を解消する管理アプリ",
+    url: "https://scores.ompoo.org/",
     concept: "属人化していた楽譜管理を、誰もがアクセスできるデータベースへ",
     description: "所属するエレクトーンサークルでは、楽譜が物理的に保管されているため、「新歓で楽譜を買う際に、既に持っているか分からない」「コンサートで弾きたい曲が部室にあるか、探しに行かないと分からない」といった課題がありました。この課題を解決するため、サークルが所蔵する全ての楽譜情報をデータベースで一元管理し、いつでも・どこでも検索・確認できるWebアプリケーション「楽譜館」を開発しました。",
     features: [
       "楽譜・楽譜集の横断検索機能",
       "キーワード検索 (作詞/作曲/編曲/アーティスト/主題歌/難易度)",
       "公式販売ページへのワンクリック遷移",
-      "バーコードスキャンによる楽譜情報の自動登録・追加機能",
+      "バーコードスキャンによる楽譜情報の自動登録機能",
+      "GitHub Actionsによる自動デプロイと更新通知機能",
       "Supabaseを利用したユーザー認証機能"
     ],
     techStack: {
-      frontend: ["Next.js", "TypeScript", "React", "TanStack Query", "TanStack Table"],
+      frontend: ["Next.js", "TypeScript", "React", "nuqs", "TanStack Table"],
       backend: ["Supabase (Auth, Database, Storage)"],
       design: ["Figma"],
-      deployment: ["cloudflare workers"]
+      deployment: ["cloudflare workers", "GitHub Actions"]
     },
     highlights: [
       {
@@ -43,7 +46,7 @@ export const WorksData: WorkItem[] = [
       },
       {
         title: "モダン技術によるパフォーマンスと拡張性の追求",
-        description: "Next.jsのSSR (サーバーサイドレンダリング) を活用し、クライアント側の負荷を軽減。データフェッチにはTanStack Queryを導入し、キャッシュを最適化することで、大量の楽譜データからでも高速な検索体験を実現しました。また、データベースは第三正規形を意識して設計し、将来的な機能追加にも対応できる拡張性を確保。SupabaseのRLS (Row Level Security) を設定することで、部員が安全に楽譜情報を追加・編集できる環境を構築しました。"
+        description: "Next.jsのSSR (サーバーサイドレンダリング) を活用し、クライアント側の負荷を軽減。検索パラメータの管理にはnuqsを導入し、URLと同期した直感的な検索体験を実現しました。また、データベースクエリの最適化により、N+1問題を回避しつつ、大量の楽譜データからでも高速に情報を取得できる設計を意識しました。将来的な機能拡張を見据え、データベースは第三正規形を保ちつつ、メンテナビリティの高いコードベースを構築しています。"
       },
       {
         title: "ユーザーの課題解決を最優先したUI/UX設計",
@@ -56,13 +59,13 @@ export const WorksData: WorkItem[] = [
     title: "サークル専用プライベートクラウド",
     subtitle: "サークルのデジタル資産（楽譜・動画）を安全に共有・保管するためのインフラ構築・運用",
     concept: "一度きりで埋もれてしまう作品を、いつでもアクセスできる「共有財産」へ",
-    description: "サークルでは、部員が作成した楽譜やコンサートの映像といった貴重なデジタル資産が、個人のPCや部室のHDDに散在し、有効活用されていないという課題がありました。一方で、プライベートな内容も含むため、一般的なクラウドサービスへのアップロードは躊躇される状況でした。そこで、部員だけが安全にアクセスできるプライベートクラウド環境を自宅サーバーに構築・運用。これにより、過去の資産を誰もが手軽に閲覧・活用できる仕組みを整えました。",
+    description: "サークルでは、部員が作成した楽譜やコンサートの映像といった貴重なデジタル資産が、個人のPCや部室のHDDに散在し、有効活用されていないという課題がありました。一方で、プライベートな内容も含むため、一般的なクラウドサービスへのアップロードは躊躇される状況でした。そこで、部員だけが安全にアクセスできるプライベートクラウド環境を構築・運用。これにより、過去の資産を誰もが手軽に閲覧・活用できる仕組みを整えました。",
     features: [
       "Keycloakによる一元的なアカウント認証・管理",
       "Nextcloudを用いたファイル共有・管理機能",
       "自作楽譜のアップロードおよびプレビュー",
       "過去のコンサート動画のストリーミング視聴",
-      "フォルダ/ファイル単位での柔軟な閲覧権限設定"
+      "フォルダでの柔軟な閲覧権限設定"
     ],
     techStack: {
       infrastructure: ["Linux (Ubuntu Server)", "Apache", "Samba"],
@@ -87,10 +90,10 @@ export const WorksData: WorkItem[] = [
   },
   {
     id: "tapla",
-    title: "tapla",
-    subtitle: "https://tapla.ompoo.org/ サークルの簡単にイベント日程調整ができる予定共有アプリ　",
+    title: "tapla (開発中)",
+    subtitle: "サークルの簡単にイベント日程調整ができる予定共有アプリ",
     concept: "面倒な「繰り返し入力」をゼロに。",
-    description: "サークルで従来使用していた日程調整ツール「tappy」には、「イベントごとに毎回、自分の空き時間を入力し直さなければならない」という課題がありました。そこで、ユーザー認証機能を追加し、一度入力した予定を別イベント作成時に自動入力することで、日程調整の手間を大幅に削減する後継アプリケーション「tapla」を開発しました。既存の便利な体験（tappy）を、より発展（++）させるという思いを込めて命名しました。",
+    description: "サークルで従来使用していた日程調整ツール「tappy」には、「イベントごとに毎回、自分の空き時間を入力し直さなければならない」という課題がありました。そこで、ユーザー認証機能を追加し、一度入力した予定を別イベント作成時に自動入力することで、日程調整の手間を大幅に削減する後継アプリケーション「tapla」を開発中です。既存の便利な体験（tappy）を、より発展（++）させるという思いを込めて命名しました。",
     features: [
       "Keycloakを利用したSSO（シングルサインオン）/ Google認証",
       "予定の自動入力機能による、複数イベントへの迅速な回答",
@@ -111,12 +114,12 @@ export const WorksData: WorkItem[] = [
         description: "サークル専用クラウドとアカウント情報を共通化するため、KeycloakをIdP（IDプロバイダ）としたSSO（シングルサインオン）を実装。さらにGoogleアカウントでのログインにも対応し、ユーザーがパスワードを覚える必要のない、セキュアで快適な認証体験を構築しました。"
       },
       {
-        title: "リアルタイム性とセキュリティを両立するアーキテクチャ",
-        description: "誰かが投票すると、その結果が他のメンバーの画面にも即時反映されるリアルタイム性をSupabaseのRealtime機能で実現。データベースへのアクセスはSupabaseのRLS (Row Level Security) で厳格に制御し、自分以外のユーザーの予定を不正に編集できないよう、安全性を担保しています。"
+        title: "拡張性とセキュリティを考慮したアーキテクチャ（予定）",
+        description: "ユーザー体験の向上に向け、SupabaseのRealtime機能を活用した即時反映や、RLS (Row Level Security) による厳格なアクセス制御の導入を予定しています。開発の進展に合わせて、利便性と安全性を高い次元で両立させるインフラ構成を目指しています。"
       },
       {
-        title: "【技術的挑戦】パフォーマンスを意識した非正規化スキーマ設計",
-        description: "最も苦労したのは、ユーザーから送られてくる投票データ（{ \"日付\": [\"10時\", \"11時\"] }）を、ユーザーごとの参加可能時間データ（{ \"ユーザーID\": [\"日付T10:00\", \"日付T11:00\"] }）へ効率的に変換・保存する部分です。当初は正規化されたスキーマを検討しましたが、データの読み出し時に複雑なクエリが必要になるため、あえて冗長性を持たせたスキーマ（非正規化）を設計。これによりデータの整形ロジックは複雑になりましたが、読み込み時のパフォーマンスを大幅に向上させることに成功しました。アプリケーションの特性に合わせた最適なデータベース設計を、トレードオフを考慮しながら判断する良い経験となりました。"
+        title: "【技術的挑戦】読み取り効率を追求した非正規化スキーマの設計（予定）",
+        description: "将来的なユーザー増やデータ量の増加を見据え、読み込み時のパフォーマンスを最大化するための非正規化スキーマ設計を検討しています。正規化による整合性の維持と、非正規化によるクエリ速度の向上のトレードオフを分析し、アプリケーションに最適なデータ構造の実装を目指しています。"
       }
     ]
   }
@@ -130,7 +133,19 @@ export default function Works() {
             
             {WorksData.map((work) => (
                 <div key={work.id} className="border border-gray-200 dark:border-gray-700 rounded-lg p-6 shadow-lg bg-white dark:bg-gray-800">
-                    <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">{work.title}</h3>
+                    <div className="flex justify-between items-start mb-2">
+                        <h3 className="text-xl font-bold text-gray-900 dark:text-white">{work.title}</h3>
+                        {work.url && (
+                            <a 
+                                href={work.url} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium"
+                            >
+                                公開先 ↗
+                            </a>
+                        )}
+                    </div>
                     <p className="text-gray-600 dark:text-gray-300 mb-3">{work.subtitle}</p>
                     
                     <div className="mb-4">

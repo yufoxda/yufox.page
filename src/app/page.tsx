@@ -58,17 +58,29 @@ export default function Home() {
         <MiniWorks />
 
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <h1>
-          contact:
-        </h1>
-          <p>
-            x: @yufox_official
-          </p>
+      <footer className="row-start-3 flex flex-col items-center gap-4 py-8">
+        <div className="flex gap-[24px] flex-wrap items-center justify-center">
+          <h2 className="font-bold text-gray-900 dark:text-white">Contact</h2>
+          <a 
+            href="https://x.com/yufox_official" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+          >
+            X: @yufox_official
+          </a>
+          <a 
+            href="https://github.com/yufoxda" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+          >
+            GitHub: yufoxda
+          </a>
+        </div>
         <p className="text-sm text-gray-500 dark:text-gray-400">
-          © 2025 yufox. All rights reserved.
+          © 2026 yufox. All rights reserved.
         </p>
-
       </footer>
     </div>
   );
