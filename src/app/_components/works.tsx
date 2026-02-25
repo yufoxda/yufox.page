@@ -34,15 +34,15 @@ export const WorksData: WorkItem[] = [
       "Supabaseを利用したユーザー認証機能"
     ],
     techStack: {
-      frontend: ["Next.js", "TypeScript", "React", "nuqs", "TanStack Table"],
-      backend: ["Supabase (Auth, Database, Storage)"],
+      frontend: ["Next.js", "TypeScript", "nuqs"],
+      backend: ["Supabase (Auth, Database)"],
       design: ["Figma"],
-      deployment: ["cloudflare workers", "GitHub Actions"]
+      deployment: ["cloudflare workers", "GitHub Actions","python (スクレイピング)"]
     },
     highlights: [
       {
         title: "【最大の挑戦】バーコードスキャンによる楽譜情報の自動登録",
-        description: "数百冊に及ぶ楽譜情報を手入力するのは非現実的でした。そこで、スマートフォンのカメラで楽譜集のバーコードを読み取り、Webスクレイピングによって書籍情報を自動で取得・整形してデータベースに登録する仕組みを実装しました。HTMLからの特定情報抽出、特にアーティスト名などに含まれる特殊文字の処理や正規表現の実装に苦労しましたが、これによりデータ登録の手間を9割以上削減し、アプリの実用性を大きく向上させることができました。"
+        description: "数百冊に及ぶ楽譜情報を手入力するのは非現実的でした。そこで、スマートフォンのカメラで楽譜集のバーコードを読み取り、Webスクレイピングによって書籍情報を自動で取得・整形してデータベースに登録する仕組みを実装しました。HTMLからの特定情報抽出、特にアーティスト名などに含まれる特殊文字の処理や正規表現の実装に苦労しましたが、これによりデータ登録の手間を大幅に短縮し、アプリの実用性を大きく向上させることができました。"
       },
       {
         title: "モダン技術によるパフォーマンスと拡張性の追求",

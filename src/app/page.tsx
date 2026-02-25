@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next"; 
 import Skills from "./_components/skills";
 import Works from "./_components/works";
 import MiniWorks from "./_components/miniWorks";
@@ -15,6 +15,9 @@ export default function Home() {
           <p className="text-lg text-center sm:text-left">
             Japanese university student engineer
           </p>
+          <a href="https://blog.yufox.page" className="text-lg text-center sm:text-left text-blue-500 hover:text-blue-700 transition-colors">
+            visit my techblog ↗
+          </a>
           <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce flex flex-col items-center gap-2 text-gray-500">
             <span className="text-xs uppercase tracking-widest">Scroll</span>
             <svg 
