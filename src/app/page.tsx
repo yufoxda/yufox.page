@@ -8,10 +8,10 @@ export default function Home() {
           <h1>yufox</h1>
           <p>28卒　学生エンジニア</p>
           <p className='mt-6'>希望職種</p>
-          <ul className='list-disc pl-5'>
-            <li>Backend engineer</li>
-            <li>Full-stack engineer</li>
-            <li>Game developer</li>
+          <ul className=''>
+            <li className='ml-8 list-disc'>Backend engineer</li>
+            <li className='ml-8 list-disc'>Full-stack engineer</li>
+            <li className='ml-8 list-disc'>Game developer</li>
           </ul>
           <ul className='flex flex-row gap-4 mt-6'>
             <li className='list-none'><a href="https://github.com/yufoxda" target="_blank" rel="noopener noreferrer">GitHub</a></li>
@@ -44,14 +44,14 @@ export default function Home() {
         <p className='tabular-nums text-center'>now</p>
       </div>
       <h2>Certifications</h2>
-      <ul className=''>
-        <li>
+      <ul >
+        <li className='px-6'>
           応用情報技術者試験
         </li>
-        <li>
+        <li className='px-6'>
           画像処理エンジニア検定 エキスパート
         </li>
-        <li>
+        <li className='px-6'>
           CGエンジニア検定 エキスパート
         </li>
       </ul>
@@ -65,10 +65,10 @@ export default function Home() {
 
           <div className='mt-auto space-y-4 pt-4'>
             <ul className='flex flex-wrap gap-2'>
-              <li className='list-none rounded-full bg-gray-100 px-2.5 py-0.5 text-xs'>nextjs</li>
-              <li className='list-none rounded-full bg-gray-100 px-2.5 py-0.5 text-xs'>supabase</li>
-              <li className='list-none rounded-full bg-gray-100 px-2.5 py-0.5 text-xs'>github actions</li>
-              <li className='list-none rounded-full bg-gray-100 px-2.5 py-0.5 text-xs'>cloudflare workers</li>
+              <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>nextjs</li>
+              <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>supabase</li>
+              <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>github actions</li>
+              <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>cloudflare workers</li>
             </ul>
 
             <div className='flex gap-4'>
@@ -88,8 +88,8 @@ export default function Home() {
           <p className='mt-2'>エレクトーンサークル公式サイト</p>
           <div className='mt-auto space-y-4 pt-4'>
             <ul className='flex flex-wrap gap-2'>
-              <li className='list-none rounded-full bg-gray-100 px-2.5 py-0.5 text-xs'>nextjs</li>
-              <li className='list-none rounded-full bg-gray-100 px-2.5 py-0.5 text-xs'>figma</li>
+              <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>nextjs</li>
+              <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>figma</li>
             </ul>
 
             <div>
@@ -105,13 +105,13 @@ export default function Home() {
           <p className='mt-2'>サークル専用クラウドサーバーのホスト</p>
           <div className='mt-auto pt-4'>
             <ul className='flex flex-wrap gap-2'>
-              <li className='list-none rounded-full bg-gray-100 px-2.5 py-0.5 text-xs'>ubuntu</li>
-              <li className='list-none rounded-full bg-gray-100 px-2.5 py-0.5 text-xs'>nextcloud</li>
-              <li className='list-none rounded-full bg-gray-100 px-2.5 py-0.5 text-xs'>keycloak</li>
-              <li className='list-none rounded-full bg-gray-100 px-2.5 py-0.5 text-xs'>apache</li>
-              <li className='list-none rounded-full bg-gray-100 px-2.5 py-0.5 text-xs'>mysql</li>
-              <li className='list-none rounded-full bg-gray-100 px-2.5 py-0.5 text-xs'>cloudflare</li>
-              <li className='list-none rounded-full bg-gray-100 px-2.5 py-0.5 text-xs'>grafana</li>
+              <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>ubuntu</li>
+              <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>nextcloud</li>
+              <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>keycloak</li>
+              <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>apache</li>
+              <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>mysql</li>
+              <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>cloudflare</li>
+              <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>grafana</li>
             </ul>
           </div>
         </div>
@@ -123,8 +123,8 @@ export default function Home() {
           <p>背景モデル担当</p>
           <div className='mt-auto space-y-4 pt-4'>
             <ul className='flex flex-wrap gap-2'>
-              <li className='list-none rounded-full bg-gray-100 px-2.5 py-0.5 text-xs'>unity</li>
-              <li className='list-none rounded-full bg-gray-100 px-2.5 py-0.5 text-xs'>blender</li>
+              <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>unity</li>
+              <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>blender</li>
             </ul>
 
             <div>
@@ -140,25 +140,25 @@ export default function Home() {
       <h1 className='text-center'>pasts</h1>
       <ul className='mt-6 grid grid-cols-1 gap-5'>
         <li className='rounded-xl border border-gray-200 p-4 shadow-sm'>
-          <div className='flex justify-between'>
+          <div className='flex justify-between items-start'>
             <h2 className='!m-0'>C言語でTIFFファイルを読み込む</h2>
-            <p className='m-0 text-gray-600'>2026/1/19</p>
+            <p className='!m-0 text-gray-600'>2026/1/19</p>
           </div>
           
           <ul className='mt-3 flex flex-wrap gap-2'>
-            <li className='list-none rounded-full bg-gray-100 px-2.5 py-0.5 text-xs'>c言語</li>
-            <li className='list-none rounded-full bg-gray-100 px-2.5 py-0.5 text-xs'>画像処理</li>
+            <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>c言語</li>
+            <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>画像処理</li>
           </ul>
         </li>
         <li className='rounded-xl border border-gray-200 p-4 shadow-sm'>
-          <div className='flex justify-between'>
+          <div className='flex justify-between items-start'>
             <h2 className='!mt-0'>VS Code拡張機能でWebviewを使ってみる</h2>
             <p className='text-sm text-gray-600'>2025/12/22</p>
           </div>
           <ul className='mt-3 flex flex-wrap gap-2'>
-            <li className='list-none rounded-full bg-gray-100 px-2.5 py-0.5 text-xs'>VS Code</li>
-            <li className='list-none rounded-full bg-gray-100 px-2.5 py-0.5 text-xs'>Webview</li>
-            <li className='list-none rounded-full bg-gray-100 px-2.5 py-0.5 text-xs'>TypeScript</li>
+            <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>VS Code</li>
+            <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>Webview</li>
+            <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>TypeScript</li>
           </ul>
         </li>
       </ul>
