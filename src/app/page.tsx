@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import icon from '../../public/icon.png';
 
 export default function Home() {
   return (
@@ -6,7 +7,7 @@ export default function Home() {
       <div className='flex w-full'>
         <div className='flex-1'>
           <h1>yufox</h1>
-          <p>28卒　学生エンジニア</p>
+          <p>28卒<span></span>学生エンジニア</p>
           <p className='mt-6'>希望職種</p>
           <ul className=''>
             <li className='ml-8 list-disc'>Backend engineer</li>
@@ -14,11 +15,15 @@ export default function Home() {
             <li className='ml-8 list-disc'>Game developer</li>
           </ul>
           <ul className='flex flex-row gap-4 mt-6'>
-            <li className='list-none'><a href="https://github.com/yufoxda" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li className='list-none'><a href="https://x.com/yufox_official" target="_blank" rel="noopener noreferrer">X</a></li>
+            <li className='list-none'><a href="https://github.com/yufoxda" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+              <Image src="/GitHub_Lockup_Black.png" alt="GitHub Logo" width={80} height={32} className='w-auto h-5' />
+            </a></li>
+            <li className='list-none'><a href="https://x.com/yufox_official" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+              <Image src="/xlogo.svg" alt="X Logo" width={24} height={24} className='w-5 h-5 brightness-0'/>
+            </a></li>
           </ul>
         </div>
-        <Image src="/globe.svg" alt="Profile Picture" width={200} height={200} className="rounded-full mt-4" />
+        <Image src={icon} alt="Profile Picture" className="mt-4 h-auto w-[200px] scale-x-[-1] object-cover rounded-full" />
       </div>
       
 
@@ -140,6 +145,7 @@ export default function Home() {
       <h1 className='text-center'>pasts</h1>
       <ul className='mt-6 grid grid-cols-1 gap-5'>
         <li className='rounded-xl border border-gray-200 p-4 shadow-sm'>
+          <a href='https://blog.yufox.page/2026-01-19-0/' target="_blank" rel="noopener noreferrer"> 
           <div className='flex justify-between items-start'>
             <h2 className='!m-0'>C言語でTIFFファイルを読み込む</h2>
             <p className='!m-0 text-gray-600'>2026/1/19</p>
@@ -149,8 +155,10 @@ export default function Home() {
             <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>c言語</li>
             <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>画像処理</li>
           </ul>
+          </a>
         </li>
         <li className='rounded-xl border border-gray-200 p-4 shadow-sm'>
+          <a href='https://blog.yufox.page/2025-12-22-0/' target="_blank" rel="noopener noreferrer">
           <div className='flex justify-between items-start'>
             <h2 className='!mt-0'>VS Code拡張機能でWebviewを使ってみる</h2>
             <p className='text-sm text-gray-600'>2025/12/22</p>
@@ -160,15 +168,28 @@ export default function Home() {
             <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>Webview</li>
             <li className='list-none rounded-full bg-gray-100 dark:bg-gray-700 px-2.5 py-0.5 text-xs dark:text-gray-100'>TypeScript</li>
           </ul>
+          </a>
         </li>
       </ul>
 
       <h1 className='text-center'>Contact</h1>
-      <p>お気軽にご連絡ください！</p>
-      <ul>
-        <li><a href="" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        <li><a href="" target="_blank" rel="noopener noreferrer">X</a></li>
-      </ul>
+      <div className='mx-auto flex flex-wrap items-center justify-center gap-x-3 gap-y-2'>
+        <p className='whitespace-nowrap'>
+          お気軽にご連絡ください！:
+        </p>
+        <ul className='flex flex-row items-center justify-center gap-5'>
+          <li className='list-none'>
+            <a href="https://github.com/yufoxda" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+              <Image src="/GitHub_Lockup_Black.png" alt="GitHub Logo" width={80} height={32} className='w-auto h-5' />
+            </a>
+          </li>
+          <li className='list-none'><a href="https://x.com/yufox_official" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+            <Image src="/xlogo.svg" alt="X Logo" width={24} height={24} className='w-5 h-5 brightness-0'/>
+          </a></li>
+        </ul>
+      </div>
+      
+      
     </div>
   );
 }
